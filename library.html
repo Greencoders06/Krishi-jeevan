@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library — Krishijeevan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="menu">
+    <h2>Krishi-jeevan</h2>
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="products.html">Find Products</a>
+      <a href="app.html">App</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section id="library" class="page-section">
+    <h2>Plant Disease Library</h2>
+    <p>Search and filter plant diseases to get detailed information.</p>
+
+    <div class="all-library">
+
+
+    <div class="s1">
+  <h3>🔎 Search Diseases and Crops</h3>
+
+<input type="text" id="combinedSearch" placeholder="Type crop or disease...">
+
+  <button id="searchBtn">Search</button>
+
+  <ul id="combinedList">
+
+  <li class="combined-item">🌾 Rice Blast</li>
+  <li class="combined-item">💧 Bacterial Leaf Blight (Rice)</li>
+  <li class="combined-item"> 🌾Brown Spot (Rice)</li>
+  <li class="combined-item">🌾 Wheat Rust (Stem Rust)</li>
+  <li class="combined-item">🍂 Leaf Rust (Wheat)</li>
+  <li class="combined-item">🌾 Powdery Mildew (Wheat)</li>
+  <li class="combined-item">🌾 Karnal Bunt (Wheat)</li>
+  <li class="combined-item">🌽 Maize Downy Mildew</li>
+  <li class="combined-item">🌽 Maize Streak Virus</li>
+  <li class="combined-item">🥔 Late Blight (Potato/Tomato)</li>
+  <li class="combined-item">🍅 Early Blight (Tomato)</li>
+  <li class="combined-item">🍅 Tomato Leaf Curl Virus</li>
+  <li class="combined-item">🥒 Powdery Mildew (Cucumber)</li>
+  <li class="combined-item">🌶️ Fusarium Wilt (Tomato/Chili)</li>
+  <li class="combined-item">🥔 Bacterial Wilt (Potato/Tomato)</li>
+  <li class="combined-item">🥒 Mosaic Virus (Cucumber/Melon)</li>
+  <li class="combined-item">🌶️ Anthracnose (Chili/Tomato)</li>
+  <li class="combined-item">🥬 Clubroot (Cabbage/Brassica)</li>
+  <li class="combined-item">🍊 Citrus Greening (Huanglongbing)</li>
+  <li class="combined-item">🥭 Mango Anthracnose</li>
+  <li class="combined-item">🍈 Papaya Ringspot Virus</li>
+  <li class="combined-item">🍌 Banana Bunchy Top Virus</li>
+  <li class="combined-item">🍎 Apple Scab</li>
+  <li class="combined-item">🍇 Powdery Mildew (Grapes)</li>
+  <li class="combined-item">🍊 Citrus Canker</li>
+  <li class="combined-item">🌱 Yellow Mosaic Virus (Pulses)</li>
+  <li class="combined-item"> 💧Ascochyta Blight (Chickpea)</li>
+  <li class="combined-item">🌱Coffee Leaf Rust</li>
+  <li class="combined-item">🫖Tea Blight (Exobasidium)</li>
+  <li class="combined-item">🌾 Powdery Mildew (Sugarcane)</li>
+</ul>
+
+<div class="disease-info" id="diseaseInfo">
+  <h4 id="diseaseName"></h4>
+  <p><strong>Cause:</strong> <span id="diseaseCause"></span></p>
+  <p><strong>Solution:</strong> <span id="diseaseSolution"></span></p>
+  <button id="backToListBtn">⬅ Back to List</button>
+</div>
+
+</div>
+
+ <div class="s2">
+
+  <h3>🔎 Search by Crop</h3>
+
+  <input type="text" id="cropSearch" placeholder="Type to filter crops...">
+<button onclick="toggleCropList()">Show Crop Types ⬇</button>
+
+  <!-- Crop list -->
+  <ul id="cropList">
+    <li class="crop-item">🌾 Rice</li>
+    <li class="crop-item">🌽 Maize</li>
+    <li class="crop-item">🌿 Wheat</li>
+    <li class="crop-item">🥔 Potato</li>
+    <li class="crop-item">🍅 Tomato</li>
+    <li class="crop-item">🍆 Brinjal</li>
+    <li class="crop-item">🥒 Cucumber</li>
+    <li class="crop-item">🍊 Orange</li>
+    <li class="crop-item">🍌 Banana</li>
+    <li class="crop-item">🥭 Mango</li>
+    <li class="crop-item">☕ Coffee</li>
+    <li class="crop-item">🍵 Tea</li>
+  </ul>
+
+
+
+  <div class="crop-info-box" id="cropInfoSection" style="display:none;">
+  <h3 id="cropInfoTitle">🌱 Crop Information</h3>
+  <p><strong>Water Needed:</strong> <span id="cropWater"></span></p>
+  <p><strong>Approx-Cost/acre:</strong> <span id="cropCost"></span></p>
+  <p><strong>Tips:</strong> <span id="cropTips"></span></p>
+  <button id="backToCropList">⬅ Back to Crop List</button>
+</div>
+
+
+</div>
+
+<div class="pathogen-search-container">
+  <h3>🧫 Filter by Pathogen</h3>
+
+  <input type="text" id="pathogenSearch" placeholder="Type pathogen...">
+  <button id="pathogenBtn">Search</button>
+
+  <ul id="pathogenList">
+    <li class="pathogen-item">🦠 Bacteria</li>
+    <li class="pathogen-item">🧬 Virus</li>
+    <li class="pathogen-item">🍄 Fungi</li>
+    <li class="pathogen-item">🪱 Nematodes</li>
+    <li class="pathogen-item">🌱 Phytoplasma</li>
+    <li class="pathogen-item">🧫 Blight (Phytophthora)</li>
+    <li class="pathogen-item">🧫 Rust (Puccinia)</li>
+    <li class="pathogen-item">🧫 Wilt (Fusarium)</li>
+    <li class="pathogen-item">🧫 Mosaic Virus</li>
+    <li class="pathogen-item">🧫 Leaf Spot (Alternaria)</li>
+  </ul>
+
+  <div id="pathogenInfo">
+      <h4 id="pathogenName"></h4>
+      <p><strong>Reason:</strong> <span id="pathogenReason"></span></p>
+      <p><strong>Control:</strong> <span id="pathogenControl"></span></p>
+      <p class="note">
+        💡 You can find these fertilizers in <b>Find Product</b> section.
+      </p>
+      <button id="backToPathogenList">⬅ Back to Pathogens</button>
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="weather-container">
+
+<div class="weather-box">
+    <h3>🌤️ Weather Update</h3>
+
+
+
+    <input 
+    type="text" 
+    id="cityInput" 
+    placeholder="Enter your city" 
+    style="padding:8px; margin:10px 0; width:90%; border-radius:8px; border:1px solid #ccc;"
+  />
+    
+
+    <p id="weatherLocation">📍 Location: Loading...</p>
+    <p id="weatherTemp">🌡️ Temperature: --°C</p>
+    <p id="weatherCondition">☁️ Condition: --</p>
+
+    <div class="crop-suggestion" id="cropSuggestion">
+  <h4 id="cropToggle">🌱 Recommended Crops for this weather ⬇</h4>
+  <ul id="recommendedCrops"></ul>
+</div>
+
+
+ </div>
+
+  <div class="budget-section">
+  <h2>🌱 Find Crops by Your Budget</h2>
+  <input type="number" id="budgetInput" placeholder="Enter your budget in ₹" />
+  <button id="findCropsBtn">Find Crops</button>
+  <p id="loadingMsg" style="display:none;">⏳ Checking crops for your budget...</p>
+  
+  <div id="budgetResult" class="result-box" style="display:none;">
+    <h3>✅ Recommended Crops</h3>
+    <ul id="cropResultList"></ul>
+    <p class="note">ℹ️ Note: The cost estimates are based on approx. <b>1 acre</b> of land and may vary by region, market price, and farming practices.</p>
+  </div>
+</div>
+
+
+<div class="farmer-box">
+    <img src="happy_farmer.png" alt="Happy Farmer" loading="lazy" />
+    <p>Increase your crop production with us</p>
+  </div>
+
+
+</div>
+
+
+
+<!-- desease image section -->
+
+
+
+
+
+
+
+<div class="disease-gallery">
+  <h4>🌾 Crop Diseases Gallery</h4>
+  <p>Not sure which disease is affecting your crop? Identify it easily using our comprehensive crop disease gallery.</p>
+  <div class="disease-grid">
+    <div class="disease-card">
+      <img src="rice blast.png" alt="Rice Blast" />
+      <p>🌾 Rice Blast</p>
+    </div>
+    <div class="disease-card">
+      <img src="bacteriel.jpg" alt="Bacterial Leaf Blight (Rice)" />
+      <p>💧 Bacterial Leaf Blight (Rice)</p>
+    </div>
+    <div class="disease-card">
+      <img src="brown_spot.jpeg" alt="Brown Spot (Rice)" />
+      <p>🌾 Brown Spot (Rice)</p>
+    </div>
+    <div class="disease-card">
+      <img src="steam.jpg" alt="Wheat Rust (Stem Rust)" />
+      <p>🌾 Wheat Rust (Stem Rust)</p>
+    </div>
+    <div class="disease-card">
+      <img src="wheat.jpeg" alt="Leaf Rust (Wheat)" />
+      <p>🍂 Leaf Rust (Wheat)</p>
+    </div>
+    <div class="disease-card">
+      <img src="maize.jpg" alt="Maize Downy Mildew" />
+      <p>🌽 Maize Downy Mildew</p>
+    </div>
+    <div class="disease-card">
+      <img src="late_blight.webp" alt="Late Blight (Potato/Tomato)" />
+      <p>🥔 Late Blight (Potato/Tomato)</p>
+    </div>
+    <div class="disease-card">
+      <img src="early_blight.jpeg" alt="Early Blight (Tomato)" />
+      <p>🍅 Early Blight (Tomato)</p>
+    </div>
+
+
+
+
+    <div class="disease-card">
+      <img src="powdery_mildew_wheat.jpg" alt="Powdery Mildew (Wheat)" />
+      <p>🌾 Powdery Mildew (Wheat)</p>
+    </div>
+    <div class="disease-card">
+      <img src="karnal_bunt.jpg" alt="Karnal Bunt (Wheat)" />
+      <p>🌾 Karnal Bunt (Wheat)</p>
+    </div>
+    <div class="disease-card">
+      <img src="maize_streak_virus.jpg" alt="Maize Streak Virus" />
+      <p>🌽 Maize Streak Virus</p>
+    </div>
+
+    <!-- Tomato/Cucumber/Potato Diseases -->
+    <div class="disease-card">
+      <img src="tomato_leaf_curl.jpg" alt="Tomato Leaf Curl Virus" />
+      <p>🍅 Tomato Leaf Curl Virus</p>
+    </div>
+    <div class="disease-card">
+      <img src="powdery_mildew_cucumber.jpg" alt="Powdery Mildew (Cucumber)" />
+      <p>🥒 Powdery Mildew (Cucumber)</p>
+    </div>
+    <div class="disease-card">
+      <img src="fusarium_wilt.jpg" alt="Fusarium Wilt (Tomato/Chili)" />
+      <p>🌶️ Fusarium Wilt (Tomato/Chili)</p>
+    </div>
+    <div class="disease-card">
+      <img src="bacterial_wilt.jpg" alt="Bacterial Wilt (Potato/Tomato)" />
+      <p>🥔 Bacterial Wilt (Potato/Tomato)</p>
+    </div>
+    <div class="disease-card">
+      <img src="mosaic_virus_cucumber.jpg" alt="Mosaic Virus (Cucumber/Melon)" />
+      <p>🥒 Mosaic Virus (Cucumber/Melon)</p>
+    </div>
+    <div class="disease-card">
+      <img src="anthracnose_chili_tomato.jpg" alt="Anthracnose (Chili/Tomato)" />
+      <p>🌶️ Anthracnose (Chili/Tomato)</p>
+    </div>
+
+    <!-- Brassica and Citrus Diseases -->
+    <div class="disease-card">
+      <img src="clubroot_cabbage.jpg" alt="Clubroot (Cabbage/Brassica)" />
+      <p>🥬 Clubroot (Cabbage/Brassica)</p>
+    </div>
+    <div class="disease-card">
+      <img src="citrus_greening.jpg" alt="Citrus Greening (Huanglongbing)" />
+      <p>🍊 Citrus Greening (Huanglongbing)</p>
+    </div>
+
+    <!-- Mango, Papaya, Banana, Apple, Grapes -->
+    <div class="disease-card">
+      <img src="mango_anthracnose.jpg" alt="Mango Anthracnose" />
+      <p>🥭 Mango Anthracnose</p>
+    </div>
+    <div class="disease-card">
+      <img src="papaya_ringspot.jpg" alt="Papaya Ringspot Virus" />
+      <p>🍈 Papaya Ringspot Virus</p>
+    </div>
+    <div class="disease-card">
+      <img src="banana_bunchy_top.jpg" alt="Banana Bunchy Top Virus" />
+      <p>🍌 Banana Bunchy Top Virus</p>
+    </div>
+    <div class="disease-card">
+      <img src="apple_scab.jpg" alt="Apple Scab" />
+      <p>🍎 Apple Scab</p>
+    </div>
+    <div class="disease-card">
+      <img src="powdery_mildew_grapes.jpg" alt="Powdery Mildew (Grapes)" />
+      <p>🍇 Powdery Mildew (Grapes)</p>
+    </div>
+    <div class="disease-card">
+      <img src="citrus_canker.jpg" alt="Citrus Canker" />
+      <p>🍊 Citrus Canker</p>
+    </div>
+
+    <!-- Pulses and Others -->
+    <div class="disease-card">
+      <img src="yellow_mosaic_pulses.jpg" alt="Yellow Mosaic Virus (Pulses)" />
+      <p>🌱 Yellow Mosaic Virus (Pulses)</p>
+    </div>
+    <div class="disease-card">
+      <img src="ascochyta_blight.jpg" alt="Ascochyta Blight (Chickpea)" />
+      <p>💧 Ascochyta Blight (Chickpea)</p>
+    </div>
+    <div class="disease-card">
+      <img src="coffee_leaf_rust.jpg" alt="Coffee Leaf Rust" />
+      <p>🌱 Coffee Leaf Rust</p>
+    </div>
+    <div class="disease-card">
+      <img src="tea_blight.jpg" alt="Tea Blight (Exobasidium)" />
+      <p>🫖 Tea Blight (Exobasidium)</p>
+    </div>
+    <div class="disease-card">
+      <img src="powdery_mildew_sugarcane.jpg" alt="Powdery Mildew (Sugarcane)" />
+      <p>🌾 Powdery Mildew (Sugarcane)</p>
+    </div>
+
+  
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+  <script src="script.js"></script>
+  
+</body>
+</html>
+
+
+
+
+

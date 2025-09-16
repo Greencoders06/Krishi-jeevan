@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishijeevan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="menu">
+    <h2>Krishijeevan</h2>
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="products.html">Find Products</a>
+      <a href="app.html">App</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <button id="loginBtn" class="login-btn" onclick="login()">Login</button>
+      <span id="welcomeText" class="welcome hidden">Welcome, this is a Demo website</span>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <h1>Welcome to Krishijeevan</h1>
+    <p>AI BASED <span id="Crop">CROP</span> RECOMMENDATION SYSTEM</p>
+
+    <div class="search-container">
+    <input type="text" id="homeSearch" placeholder="Search crops, diseases, or solutions..." />
+    <span class="search-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+
+
+    </span>
+  </div>
+
+
+  <div class="get-started-container">
+    <a href="camera.html" class="get-started-btn">Get Started</a>
+  </div>
+
+
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions">
+    <h2>Our Solutions</h2>
+    <div class="boxes-wrap">
+      <div class="boxes">
+        <h3>🌱 Disease Detection</h3>
+        <p><strong>Identify and diagnose plant diseases early with precision.</strong>
+          <strong>Krishi-jeevan </strong>uses advanced artificial intelligence to detect crop diseases quickly and accurately.our platform can identify early signs of fungal, bacterial, and viral infections across a wide variety of crops.
+        </p>
+      </div>
+      <div class="boxes">
+        <h3>🐾 Pest Management</h3>
+        <p><strong>Monitor and control pests using AI algorithms.</strong>Krishi-jeevan offers advanced pest management solutions using artificial intelligence to help farmers protect their crops efficiently and sustainably. By analyzing real-time field data, images of crops, and environmental conditions</p>
+      </div>
+      <div class="boxes">
+        <h3>💧 Optimized Irrigation</h3>
+        <p><strong>Optimize water usage based on crop needs.</strong>Optimized irrigation leverages advanced technology and data-driven insights to deliver the right amount of water to crops at the right time. By analyzing soil moisture, weather patterns, and crop requirements, AI-powered systems can reduce water waste </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="boost-production">
+  <h2 class="main-heading">Boost Your Production</h2>
+
+  <!-- First Row: Text Left, Video Right -->
+  <div class="boost-row">
+    
+    <div class="boost-text">
+      <h3>Crop Health Analysis</h3>
+      <p>
+        Click the button below to access the<strong> Library </strong> and explore crop & disease solutions.
+ improve crop health, and maximize your yield.
+Easily search for crop-specific diseases and get actionable guidance for effective protection.
+      </p>
+      <a href="library.html" class="find-btn">Check Health</a>
+    </div>
+
+
+    <div class="video-frame">
+      <video autoplay muted loop playsinline>
+        <source src="right_treatment.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    
+
+
+  </div>
+
+  <!-- Second Row: Video Left, Text Right -->
+  <div class="boost-row reverse">
+
+  
+
+    <div class="boost-text">
+      <h3>Hire labour or work as a labour</h3>
+      <p>
+        Click the <strong>Find solutions</strong> button to access the Library and explore<strong> Search by pathogens</strong>.
+ Find treatment for diffrent pathogens, and maximize your yield.
+Easily search for crop-specific diseases and get actionable guidance for effective protection."
+      </p>
+      <a href="products.html" class="find-btn">Hire/work</a>
+    </div>
+
+    <div class="video-frame">
+      <video autoplay muted loop playsinline>
+        <source src="right_treatment.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+
+
+  </div>
+
+
+
+  <!--crops in your budget-->
+
+
+  <div class="boost-row">
+    
+    <div class="boost-text">
+      <h3>Discover Crops That Fit Your Investment</h3>
+      <p>
+        Click the button below to access the Library  and <strong>Find crops in your budget</strong>.
+ improve crop health, and maximize your yield.
+Easily search for crop-specific diseases and get actionable guidance for effective protection.
+      </p>
+      <a href="library.html" class="find-btn">Get Suggestions</a>
+    </div>
+
+
+    <div class="video-frame">
+      <video autoplay muted loop playsinline>
+        <source src="right_treatment.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+  </div>
+
+</section>
+
+<section id="krishi-numbers">
+  <h2 class="numbers-heading">Krishi Jeevan in Numbers</h2>
+  <div class="numbers-grid">
+    <div class="number-card">
+      <img src="time.svg" alt="Diagnose" />
+      <h3>5 s</h3>
+      <p>Get your crop diagnosed in 5 sec.</p>
+    </div>
+    <div class="number-card">
+      <img src="crops.svg" alt="Crops" loading="lazy"/>
+      <h3>30+</h3>
+      <p>You'll be able to detect 30+ different kinds of crops!</p>
+    </div>
+    <div class="number-card">
+      <img src="treatment.svg" alt="Diseases" loading="lazy"/>
+      <h3>40+</h3>
+      <p>Find the right treatment for more than 40 diseases.</p>
+    </div>
+    <div class="number-card">
+      <img src="improvement.svg" alt="Production" loading="lazy"/>
+      <h3>80%</h3>
+      <p>Improved Agricultural Output</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="sustainable-farming">
+  <div class="section-container">
+    <h2>Helping Farmers Grow More, Sustainably and Making Farming Better</h2>
+    <p>
+      Krishi Jeevan uses AI to help farmers detect crop diseases, optimize irrigation, and make better decisions for healthier crops.
+    </p>
+    <p>
+      Our solutions increase yield, reduce resource waste, and promote sustainable farming practices.
+    </p>
+    <p>
+      With personalized recommendations, farmers can protect crops, prevent losses, and achieve profitable harvests.
+    </p>
+  </div>
+</section>
+
+
+
+<!--Footer section -->
+
+
+<footer id="main-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>Krishi Jeevan</h3>
+      <p>AI-powered solutions helping farmers detect crop diseases, optimize yield, and grow sustainably.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="app.html">App</a></li>
+        <li><a href="library.html">Library</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="about.html">Company</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: info@krishijeevan.com</p>
+      <p>Phone: +91 123 456 7890</p>
+      <div class="social-icons">
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Krishi Jeevan. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

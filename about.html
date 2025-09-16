@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — krishijeevan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="menu">
+    <h2>Krishijeevan</h2>
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="products.html">Find Products</a>
+      <a href="app.html">App</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section id="page-section">
+  <div class="company-container">
+    <h2>About <span class="animated-text">Krishijeevan</span></h2>
+
+    <h3>About the Company</h3>
+    <p>
+      <strong>Krishijeevan</strong> is a pioneering agri-tech company that leverages advanced artificial intelligence to diagnose and cure crop diseases at an early stage, optimize crop yield, and provide precision farming solutions. 
+      We empower farmers with actionable insights and AI-driven recommendations to ensure healthy, sustainable, and highly productive crops.
+    </p>
+    <p>
+      Our solutions combine satellite imagery, IoT sensors, and predictive analytics to monitor crop health, detect pest infestations, and optimize resource usage efficiently.
+    </p>
+    <h3>Our Vision</h3>
+    <p>
+      To revolutionize agriculture worldwide by providing AI-powered solutions that enable sustainable farming, maximize crop yield, and ensure food security for the future.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>
+      Our mission is to integrate cutting-edge AI technologies into everyday farming practices, helping farmers make informed decisions, reduce resource wastage, and achieve optimal productivity.
+    </p>
+
+    <h3>Our Core Values</h3>
+    <ul>
+      <li>🌱 Innovation: Continuously developing smarter AI-based farming solutions.</li>
+      <li>🌱 Sustainability: Promoting eco-friendly practices in agriculture.</li>
+      <li>🌱 Empowerment: Providing farmers with the tools to make data-driven decisions.</li>
+      <li>🌱 Reliability: Ensuring accurate, actionable insights every time.</li>
+    </ul>
+
+    <h3>Future Scope</h3>
+    <p>
+      krishijeevan aims to expand its platform globally, covering a wider variety of crops and integrating predictive climate analytics. 
+      We plan to develop mobile apps for real-time monitoring, automated precision farming tools, and AI-powered marketplaces for seeds, fertilizers, and crop treatments. 
+      Our vision is to make farming smarter, safer, and more profitable using sustainable AI solutions.
+    </p>
+
+
+
+
+  </div>
+
+
+  
+
+
+
+</section>
+
+
+
+<section id="whyKrishiJeevan" style="background: #fff; padding: 1px 20px 60px 20px;">
+  <h2 class="section-title">Why Krishi Jeevan Stands Out</h2>
+
+  <div class="standout-grid">
+    
+    <div class="standout-box">
+      <div class="icon">💡</div>
+      <h3>Investment-Based Recommendation Tools</h3>
+      <p>Get AI-powered crop and fertilizer recommendations optimized for your investment and land area to maximize yield and profitability.</p>
+    </div>
+
+    <div class="standout-box">
+      <div class="icon">👷</div>
+      <h3>Labour Ecosystem</h3>
+      <p>Easily hire skilled labor or register as a worker, creating a seamless connection between farmers and laborers in your area.</p>
+    </div>
+    <div class="standout-box">
+      <div class="icon">📈</div>
+      <h3>Real-Time Market Price Integration</h3>
+      <p>Stay updated with current market rates for crops, fertilizers, and other inputs to make informed decisions and maximize profits.</p>
+    </div>
+
+    <div class="standout-box">
+      <div class="icon">🌱</div>
+      <h3>Holistic Farming Support</h3>
+      <p>Get end-to-end assistance covering crop selection, soil health, irrigation, pest management, and sustainable farming practices.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #1f3d2e;
+  }
+
+
+  .standout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Boxes */
+  .standout-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+  /* Delay for staggered animation */
+  .standout-box:nth-child(1) { animation-delay: 0.1s; }
+  .standout-box:nth-child(2) { animation-delay: 0.3s; }
+  .standout-box:nth-child(3) { animation-delay: 0.5s; }
+  .standout-box:nth-child(4) { animation-delay: 0.7s; }
+
+  .standout-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 34px rgba(18,33,22,0.09);
+    background: #f0f9f5;
+  }
+
+  /* Icons */
+  .standout-box .icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  /* Headings and Paragraphs */
+  .standout-box h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+  }
+
+  .standout-box p {
+    font-size: 15px;
+    color: #555;
+  }
+
+  /* Fade In Up Animation */
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 820px) {
+    .standout-grid { grid-template-columns: 1fr; }
+    .standout-box { padding: 20px; }
+  }
+</style>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
