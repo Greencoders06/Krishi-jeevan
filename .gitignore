@@ -1,2 +1,3 @@
-# Ignore sensitive API key file
+# Ignore sensitive API key file 
 config.js
+.env
