@@ -108,12 +108,121 @@
     text-align: center;
     padding: 20px;
   }
+
+
+
+
+
+
+  .hamburger {
+  display: none;
+  margin-left: 110px;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.hamburger span {
+  
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+
+.menu-links .login-btn {
+  margin-right: 6px; 
+}
+
+
+@media (max-width: 768px) {
+  .menu-links {
+    display: none;
+    position: absolute;         
+    top: 75px;                  
+    right: 5px;                
+    background: rgb(215, 214, 214);
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    width: auto;                 
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  .menu-links a,
+  .menu-links button {
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+
+  #google_translate_element {
+    order: 3;
+    margin-left: 1px;
+
+
+  }
+}
+
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+    #home {
+      padding-top: 120px;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
 
 <header class="menu">
   <h2>Krishijeevan</h2>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+
+
   <nav class="menu-links">
     <a href="index.html">Home</a>
     <a href="library.html">Library</a>
@@ -226,6 +335,9 @@
   }
 </script>
 
+
+
+
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
@@ -261,7 +373,7 @@
 
 
 
-
+<script src="script.js"></script>
 
 
 </body>
