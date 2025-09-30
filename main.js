@@ -111,9 +111,9 @@ analyzeBtn.addEventListener('click', async () => {
       });
 
       if (!response.ok) {
-        if (response.status === 401) resultBox.innerHTML = "❌ API key is invalid or expired.";
+        if (response.status === 401) resultBox.innerHTML = "Please try again.";
         else if (response.status === 429) resultBox.innerHTML = "⚠️ Too many requests. Try again later.";
-        else resultBox.innerHTML = "⚠️ API not responding. Try again later.";
+        else resultBox.innerHTML = "⚠️ Model is not responding. Try again later.";
         return;
       }
 

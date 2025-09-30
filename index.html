@@ -1,53 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krishijeevan</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --nav-h: 70px;
+    }
+
+  .menu h2 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .menu-links a {
+      color: white;
+      text-decoration: none;
+      gap:15px;
+      font-size: 17px;
+    }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 1200;
+}
+
+.menu-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+#google_translate_element select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #367a38;
+  background: #fff;
+  color: #171616;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  margin-left: 110px;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.hamburger span {
+  
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+
+.menu-links .login-btn {
+  margin-right: 6px; 
+}
+
+
+@media (max-width: 768px) {
+  .menu-links {
+    display: none;
+    position: absolute;         
+    top: 75px;                  
+    right: 5px;                
+    background: rgb(215, 214, 214);
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    width: auto;                 
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  .menu-links a,
+  .menu-links button {
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+
+  #google_translate_element {
+    order: 3;
+    margin-left: 1px;
+
+
+  }
+}
+
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+    #home {
+      padding-top: 120px;
+      text-align: center;
+    }
+
+
+
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="menu">
-    <h2>Krishijeevan</h2>
-    <nav class="menu-links">
-      <a href="index.html">Home</a>
-      <a href="library.html">Library</a>
-      <a href="products.html">Find Products</a>
-      <a href="app.html">App</a>
-      <a href="news.html">News</a>
-      <a href="about.html">About</a>
-      <button id="loginBtn" class="login-btn" onclick="login()">Login</button>
-      <span id="welcomeText" class="welcome hidden">Welcome, this is a Demo website</span>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
+  <header class="menu">
+  <h2>Krishijeevan</h2>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  
+  <nav class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="library.html">Library</a>
+    <a href="products.html">Find Products</a>
+    <a href="app.html">Schemes</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About</a>
+    <button id="login-btn" onclick="login()">Login</button>
+
+  <span id="welcomeText" class="welcome hidden">Welcome to Krishijeevan</span>
+    
+    <div id="google_translate_element"></div>
+  </nav>
+</header>
+
+
+
+  
   <section id="home">
+
     <h1>Welcome to Krishijeevan</h1>
-    <p>AI BASED <span id="Crop">CROP</span> RECOMMENDATION SYSTEM</p>
+    <p>ENHANCING <span id="Crop">FARMER PRODUCTIVITY </span>THROUGH INNOVATIVE TECHNOLOGY SOLUTIONS</p>
 
     <div class="search-container">
-    <input type="text" id="homeSearch" placeholder="Search crops, diseases, or solutions..." />
+      <input type="text" id="homeSearch" placeholder="Search crops, diseases, or solutions..." />
+      
     <span class="search-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="8"></circle>
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
 
 
     </span>
-  </div>
+
+    
+    
+    </div>
 
 
-  <div class="get-started-container">
-    <a href="camera.html" class="get-started-btn">Get Started</a>
-  </div>
 
 
+
+    <div class="get-started-container">
+      <a href="camera.html" class="get-started-btn">Get Started</a>
+    </div>
   </section>
 
-  <!-- Solutions -->
+
+
   <section id="solutions">
     <h2>Our Solutions</h2>
     <div class="boxes-wrap">
@@ -70,12 +214,10 @@
 
 
 
-
-
   <section id="boost-production">
   <h2 class="main-heading">Boost Your Production</h2>
 
-  <!-- First Row: Text Left, Video Right -->
+
   <div class="boost-row">
     
     <div class="boost-text">
@@ -101,7 +243,7 @@ Easily search for crop-specific diseases and get actionable guidance for effecti
 
   </div>
 
-  <!-- Second Row: Video Left, Text Right -->
+
   <div class="boost-row reverse">
 
   
@@ -129,7 +271,7 @@ Easily search for crop-specific diseases and get actionable guidance for effecti
 
 
 
-  <!--crops in your budget-->
+  
 
 
   <div class="boost-row">
@@ -202,18 +344,15 @@ Easily search for crop-specific diseases and get actionable guidance for effecti
 
 
 
-<!--Footer section -->
-
-
 <footer id="main-footer">
   <div class="footer-container">
-    <!-- About -->
+  
     <div class="footer-section about">
       <h3>Krishi Jeevan</h3>
       <p>AI-powered solutions helping farmers detect crop diseases, optimize yield, and grow sustainably.</p>
     </div>
 
-    <!-- Quick Links -->
+    
     <div class="footer-section links">
       <h3>Quick Links</h3>
       <ul>
@@ -246,6 +385,27 @@ Easily search for crop-specific diseases and get actionable guidance for effecti
 </footer>
 
 
+  <!-- ✅ JS -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu-links').classList.toggle('active');
+    }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,ta,te,bho',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+
+
+
+
+
+
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="script.js"></script>
 </body>
 </html>

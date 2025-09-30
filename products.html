@@ -6,6 +6,76 @@
   <title>Find Products</title>
   <link rel="stylesheet" href="style.css">
 
+
+
+
+<style>
+    /* ✅ Add responsive navbar styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .menu h2 {
+        flex: 1;
+      }
+
+      .hamburger {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        margin-left: 20px;
+        width: 90%;
+        margin-top: 35px;
+
+        background:rgb(239, 238, 238);
+        padding: 15px 0;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .menu-links.active {
+        display: flex;
+      }
+
+      .menu-links a,
+      .menu-links button,
+      .menu-links span {
+        color:rgb(70, 69, 69);
+        font-size: 18px;
+      }
+    }
+  </style>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
   <style>
   /* Find Products Section */
   #products {
@@ -140,12 +210,22 @@
 <body>
 
   <header class="menu">
-    <h2>Krishi-jeevan</h2>
-    <nav class="menu-links">
+    <h2>Krishijeevan</h2>
+
+
+    <!-- ✅ Added Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+
+    <nav class="menu-links" id="menuLinks">
       <a href="index.html">Home</a>
       <a href="library.html">Library</a>
       <a href="products.html">Find Products</a>
-      <a href="app.html">App</a>
+      <a href="app.html">Schemes</a>
       <a href="news.html">News</a>
       <a href="about.html">About</a>
     </nav>
@@ -924,28 +1004,50 @@ window.addEventListener('click', e => { if(e.target === popup) popup.style.displ
       });
     }
   });
+
+
+
+  
+
+  
+    const hamburger = document.getElementById('hamburger');
+    const menuLinks = document.getElementById('menuLinks');
+
+    hamburger.addEventListener('click', () => {
+      menuLinks.classList.toggle('active');
+    });
+  
+
+
 </script>
-
-
-
-<!--Hire section -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
   </section>
+
+
+
+
+
+
+
+
+
+
+  <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 

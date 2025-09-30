@@ -1,41 +1,269 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krishijeevan App</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Schemes - Krishijeevan</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #f6f6f6;
+    color: #333;
+  }
+  
+  header.menu h2 { color: white; margin: 0; }
+  .menu-links a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .menu-links a:hover { text-decoration: underline; }
+  /* Page header */
+  #gov-schemes {
+    margin-top: 30px;
+    padding: 50px 20px 30px;
+    text-align: center;
+  }
+  #gov-schemes h1 {
+    font-size: 36px;
+    color: rgb(34, 124, 75);
+    margin-bottom: 10px;
+  }
+  #gov-schemes p {
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    color: #555;
+  }
+  /* Filter buttons */
+  .filter-container {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .filter-btn {
+    background-color: #fff;
+    border: 1px solid #4caf50;
+    color: rgb(52, 156, 98);
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background-color: rgb(51, 155, 98);
+    color: white;
+  }
+  /* Scheme cards grid */
+  .scheme-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 50px;
+    padding: 0 20px 50px 20px;
+  }
+  .scheme-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  .scheme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  .scheme-card h3 {
+    color:rgb(52, 155, 98);
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  .scheme-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .scheme-card a {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+  .scheme-card a:hover { background-color: #45a049; }
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
 </head>
 <body>
-  <header class="menu">
-    <h2>Krishijeevan</h2>
-    <nav class="menu-links">
-      <a href="index.html">Home</a>
-      <a href="library.html">Library</a>
-      <a href="products.html">Find Products</a>
-      <a href="app.html">App</a>
-      <a href="news.html">News</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
 
-  <section id="app" class="page-section">
-    <h2>Get the App on:-</h2>
+<header class="menu">
+  <h2>Krishijeevan</h2>
+  <nav class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="library.html">Library</a>
+    <a href="products.html">Find Products</a>
+    <a href="app.html">Schemes</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section id="gov-schemes">
+  <h1>Government Schemes for Farmers</h1>
+  <p>Explore the most relevant government schemes to help farmers increase productivity, improve income, and adopt sustainable farming practices. You can filter schemes by type for easy navigation.</p>
+
+  <div class="filter-container">
+    <button class="filter-btn active" data-type="all">All</button>
+    <button class="filter-btn" data-type="credit">Credit</button>
+    <button class="filter-btn" data-type="insurance">Insurance</button>
+    <button class="filter-btn" data-type="subsidy">Subsidy</button>
+    <button class="filter-btn" data-type="irrigation">Irrigation</button>
+  </div>
+
+  <div class="scheme-list" id="schemeList">
+    <!-- Cards populated by JS -->
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Krishijeevan. All rights reserved.</p>
+</footer>
+
+<script>
+  const schemes = [
+    {name:"PM-KISAN", type:"subsidy", desc:"Provides ₹6,000/year to support small and marginal farmers.", eligibility:"Small and marginal farmers with landholding up to 2 hectares.", link:"https://pmkisan.gov.in/"},
+    {name:"Pradhan Mantri Fasal Bima Yojana", type:"insurance", desc:"Crop insurance covering losses due to natural disasters, pests, or diseases.", eligibility:"All farmers growing notified crops.", link:"https://pmfby.gov.in/"},
+    {name:"Kisan Credit Card", type:"credit", desc:"Provides farmers with credit at low interest for crop production and investment.", eligibility:"All eligible farmers.", link:"https://www.kisancreditcard.com/"},
+    {name:"Soil Health Card Scheme", type:"subsidy", desc:"Provides soil testing and crop-specific nutrient advice.", eligibility:"All farmers in India.", link:"https://soilhealth.dac.gov.in/"},
+    {name:"Pradhan Mantri Krishi Sinchai Yojana", type:"irrigation", desc:"Improves irrigation facilities and water-use efficiency.", eligibility:"Farmers with irrigable land.", link:"https://pmksy.gov.in/"},
+    {name:"Rashtriya Krishi Vikas Yojana", type:"subsidy", desc:"Promotes agriculture productivity, infrastructure and growth.", eligibility:"State/central government projects.", link:"https://rkvy.nic.in/"},
+    {name:"National Agriculture Insurance Scheme", type:"insurance", desc:"Comprehensive insurance for crops, livestock, and fisheries.", eligibility:"All farmers with registered crops or livestock.", link:"https://www.agricultureinsurance.gov.in/"}
+  ];
+
+  const container = document.getElementById('schemeList');
+
+  function displaySchemes(filter="all"){
+    container.innerHTML = "";
+    schemes.forEach(s => {
+      if(filter === "all" || s.type === filter){
+        const card = document.createElement('div');
+        card.className = 'scheme-card';
+        card.innerHTML = `
+          <h3>${s.name}</h3>
+          <p>${s.desc}</p>
+          <p><strong>Eligibility:</strong> ${s.eligibility}</p>
+          <a href="${s.link}" target="_blank">Learn More</a>
+        `;
+        container.appendChild(card);
+      }
+    });
+    // Scroll animation
+    const cards = document.querySelectorAll('.scheme-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(card => observer.observe(card));
+  }
+
+  displaySchemes(); // initial display
+
+  // Filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const type = btn.getAttribute('data-type');
+      displaySchemes(type);
+    });
+  });
 
 
-    <a href="https://play.google.com/store/apps/details?id=com.yourapp.package" target="_blank">
-  <img alt="Get it on Google Play"
-       src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="210px"/>
-</a>
 
-<a id="apple" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank">
-    <img alt="Download on the App Store"
-         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="180px"/>
-        </a>
 
-  </section>
 
-  <script src="script.js"></script>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
+

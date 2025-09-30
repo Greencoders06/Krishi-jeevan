@@ -5,15 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library — Krishijeevan</title>
   <link rel="stylesheet" href="style.css">
+
+
+
+  <style>
+    /* ✅ Add responsive navbar styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .menu h2 {
+        flex: 1;
+      }
+
+      .hamburger {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        margin-left: 20px;
+        width: 90%;
+        margin-top: 35px;
+
+        background:rgb(239, 238, 238);
+        padding: 15px 0;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .menu-links.active {
+        display: flex;
+      }
+
+      .menu-links a,
+      .menu-links button,
+      .menu-links span {
+        color:rgb(70, 69, 69);
+        font-size: 18px;
+      }
+    }
+  </style>
+
+
+
 </head>
 <body>
   <header class="menu">
-    <h2>Krishi-jeevan</h2>
-    <nav class="menu-links">
+    <h2>Krishijeevan</h2>
+
+
+
+
+    <!-- ✅ Added Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+
+
+
+
+    <nav class="menu-links" id="menuLinks">
       <a href="index.html">Home</a>
       <a href="library.html">Library</a>
       <a href="products.html">Find Products</a>
-      <a href="app.html">App</a>
+      <a href="app.html">Schemes</a>
       <a href="news.html">News</a>
       <a href="about.html">About</a>
     </nav>
@@ -207,168 +281,175 @@
 
 
 
+
+
+
+
+
+
 <div class="disease-gallery">
   <h4>🌾 Crop Diseases Gallery</h4>
   <p>Not sure which disease is affecting your crop? Identify it easily using our comprehensive crop disease gallery.</p>
-  <div class="disease-grid">
-    <div class="disease-card">
-      <img src="rice blast.png" alt="Rice Blast" />
-      <p>🌾 Rice Blast</p>
-    </div>
-    <div class="disease-card">
-      <img src="bacteriel.jpg" alt="Bacterial Leaf Blight (Rice)" />
-      <p>💧 Bacterial Leaf Blight (Rice)</p>
-    </div>
-    <div class="disease-card">
-      <img src="brown_spot.jpeg" alt="Brown Spot (Rice)" />
-      <p>🌾 Brown Spot (Rice)</p>
-    </div>
-    <div class="disease-card">
-      <img src="steam.jpg" alt="Wheat Rust (Stem Rust)" />
-      <p>🌾 Wheat Rust (Stem Rust)</p>
-    </div>
-    <div class="disease-card">
-      <img src="wheat.jpeg" alt="Leaf Rust (Wheat)" />
-      <p>🍂 Leaf Rust (Wheat)</p>
-    </div>
-    <div class="disease-card">
-      <img src="maize.jpg" alt="Maize Downy Mildew" />
-      <p>🌽 Maize Downy Mildew</p>
-    </div>
-    <div class="disease-card">
-      <img src="late_blight.webp" alt="Late Blight (Potato/Tomato)" />
-      <p>🥔 Late Blight (Potato/Tomato)</p>
-    </div>
-    <div class="disease-card">
-      <img src="early_blight.jpeg" alt="Early Blight (Tomato)" />
-      <p>🍅 Early Blight (Tomato)</p>
-    </div>
-
-
-
-
-    <div class="disease-card">
-      <img src="powdery_mildew_wheat.jpg" alt="Powdery Mildew (Wheat)" />
-      <p>🌾 Powdery Mildew (Wheat)</p>
-    </div>
-    <div class="disease-card">
-      <img src="karnal_bunt.jpg" alt="Karnal Bunt (Wheat)" />
-      <p>🌾 Karnal Bunt (Wheat)</p>
-    </div>
-    <div class="disease-card">
-      <img src="maize_streak_virus.jpg" alt="Maize Streak Virus" />
-      <p>🌽 Maize Streak Virus</p>
-    </div>
-
-    <!-- Tomato/Cucumber/Potato Diseases -->
-    <div class="disease-card">
-      <img src="tomato_leaf_curl.jpg" alt="Tomato Leaf Curl Virus" />
-      <p>🍅 Tomato Leaf Curl Virus</p>
-    </div>
-    <div class="disease-card">
-      <img src="powdery_mildew_cucumber.jpg" alt="Powdery Mildew (Cucumber)" />
-      <p>🥒 Powdery Mildew (Cucumber)</p>
-    </div>
-    <div class="disease-card">
-      <img src="fusarium_wilt.jpg" alt="Fusarium Wilt (Tomato/Chili)" />
-      <p>🌶️ Fusarium Wilt (Tomato/Chili)</p>
-    </div>
-    <div class="disease-card">
-      <img src="bacterial_wilt.jpg" alt="Bacterial Wilt (Potato/Tomato)" />
-      <p>🥔 Bacterial Wilt (Potato/Tomato)</p>
-    </div>
-    <div class="disease-card">
-      <img src="mosaic_virus_cucumber.jpg" alt="Mosaic Virus (Cucumber/Melon)" />
-      <p>🥒 Mosaic Virus (Cucumber/Melon)</p>
-    </div>
-    <div class="disease-card">
-      <img src="anthracnose_chili_tomato.jpg" alt="Anthracnose (Chili/Tomato)" />
-      <p>🌶️ Anthracnose (Chili/Tomato)</p>
-    </div>
-
-    <!-- Brassica and Citrus Diseases -->
-    <div class="disease-card">
-      <img src="clubroot_cabbage.jpg" alt="Clubroot (Cabbage/Brassica)" />
-      <p>🥬 Clubroot (Cabbage/Brassica)</p>
-    </div>
-    <div class="disease-card">
-      <img src="citrus_greening.jpg" alt="Citrus Greening (Huanglongbing)" />
-      <p>🍊 Citrus Greening (Huanglongbing)</p>
-    </div>
-
-    <!-- Mango, Papaya, Banana, Apple, Grapes -->
-    <div class="disease-card">
-      <img src="mango_anthracnose.jpg" alt="Mango Anthracnose" />
-      <p>🥭 Mango Anthracnose</p>
-    </div>
-    <div class="disease-card">
-      <img src="papaya_ringspot.jpg" alt="Papaya Ringspot Virus" />
-      <p>🍈 Papaya Ringspot Virus</p>
-    </div>
-    <div class="disease-card">
-      <img src="banana_bunchy_top.jpg" alt="Banana Bunchy Top Virus" />
-      <p>🍌 Banana Bunchy Top Virus</p>
-    </div>
-    <div class="disease-card">
-      <img src="apple_scab.jpg" alt="Apple Scab" />
-      <p>🍎 Apple Scab</p>
-    </div>
-    <div class="disease-card">
-      <img src="powdery_mildew_grapes.jpg" alt="Powdery Mildew (Grapes)" />
-      <p>🍇 Powdery Mildew (Grapes)</p>
-    </div>
-    <div class="disease-card">
-      <img src="citrus_canker.jpg" alt="Citrus Canker" />
-      <p>🍊 Citrus Canker</p>
-    </div>
-
-    <!-- Pulses and Others -->
-    <div class="disease-card">
-      <img src="yellow_mosaic_pulses.jpg" alt="Yellow Mosaic Virus (Pulses)" />
-      <p>🌱 Yellow Mosaic Virus (Pulses)</p>
-    </div>
-    <div class="disease-card">
-      <img src="ascochyta_blight.jpg" alt="Ascochyta Blight (Chickpea)" />
-      <p>💧 Ascochyta Blight (Chickpea)</p>
-    </div>
-    <div class="disease-card">
-      <img src="coffee_leaf_rust.jpg" alt="Coffee Leaf Rust" />
-      <p>🌱 Coffee Leaf Rust</p>
-    </div>
-    <div class="disease-card">
-      <img src="tea_blight.jpg" alt="Tea Blight (Exobasidium)" />
-      <p>🫖 Tea Blight (Exobasidium)</p>
-    </div>
-    <div class="disease-card">
-      <img src="powdery_mildew_sugarcane.jpg" alt="Powdery Mildew (Sugarcane)" />
-      <p>🌾 Powdery Mildew (Sugarcane)</p>
-    </div>
-
   
+  <div class="disease-grid">
+    <!-- First 12 always visible -->
+    <div class="disease-card"><img src="rice blast.png" alt="Rice Blast" /><p>🌾 Rice Blast</p></div>
+    <div class="disease-card"><img src="bacteriel.jpg" alt="Bacterial Leaf Blight" /><p>💧 Bacterial Leaf Blight (Rice)</p></div>
+    <div class="disease-card"><img src="brown_spot.jpeg" alt="Brown Spot" /><p>🌾 Brown Spot (Rice)</p></div>
+    <div class="disease-card"><img src="steam.jpg" alt="Wheat Rust" /><p>🌾 Wheat Rust (Stem Rust)</p></div>
+    <div class="disease-card"><img src="wheat.jpeg" alt="Leaf Rust" /><p>🍂 Leaf Rust (Wheat)</p></div>
+    <div class="disease-card"><img src="maize.jpg" alt="Maize Downy Mildew" /><p>🌽 Maize Downy Mildew</p></div>
+    <div class="disease-card"><img src="late_blight.webp" alt="Late Blight" /><p>🥔 Late Blight (Potato/Tomato)</p></div>
+    <div class="disease-card"><img src="early_blight.jpeg" alt="Early Blight" /><p>🍅 Early Blight (Tomato)</p></div>
+    <div class="disease-card"><img src="powdery_mildew_wheat.jpg" alt="Powdery Mildew Wheat" /><p>🌾 Powdery Mildew (Wheat)</p></div>
+    <div class="disease-card"><img src="karnal_bunt.jpg" alt="Karnal Bunt" /><p>🌾 Karnal Bunt (Wheat)</p></div>
+    <div class="disease-card"><img src="maize_streak_virus.jpg" alt="Maize Streak Virus" /><p>🌽 Maize Streak Virus</p></div>
+    <div class="disease-card"><img src="tomato_leaf_curl.jpg" alt="Tomato Leaf Curl" /><p>🍅 Tomato Leaf Curl Virus</p></div>
 
-
-
-
-
+    <!-- Remaining start hidden -->
+    <div class="disease-card hidden"><img src="powdery_mildew_cucumber.jpg" alt="Powdery Mildew" /><p>🥒 Powdery Mildew (Cucumber)</p></div>
+    <div class="disease-card hidden"><img src="fusarium_wilt.jpg" alt="Fusarium Wilt" /><p>🌶️ Fusarium Wilt (Tomato/Chili)</p></div>
+    <div class="disease-card hidden"><img src="bacterial_wilt.jpg" alt="Bacterial Wilt" /><p>🥔 Bacterial Wilt (Potato/Tomato)</p></div>
+    <div class="disease-card hidden"><img src="mosaic_virus_cucumber.jpg" alt="Mosaic Virus" /><p>🥒 Mosaic Virus (Cucumber/Melon)</p></div>
+    <div class="disease-card hidden"><img src="anthracnose_chili_tomato.jpg" alt="Anthracnose" /><p>🌶️ Anthracnose (Chili/Tomato)</p></div>
+    <div class="disease-card hidden"><img src="clubroot_cabbage.jpg" alt="Clubroot" /><p>🥬 Clubroot (Cabbage/Brassica)</p></div>
+    <div class="disease-card hidden"><img src="citrus_greening.jpg" alt="Citrus Greening" /><p>🍊 Citrus Greening (Huanglongbing)</p></div>
+    <div class="disease-card hidden"><img src="mango_anthracnose.jpg" alt="Mango Anthracnose" /><p>🥭 Mango Anthracnose</p></div>
+    <div class="disease-card hidden"><img src="papaya_ringspot.jpg" alt="Papaya Ringspot" /><p>🍈 Papaya Ringspot Virus</p></div>
+    <div class="disease-card hidden"><img src="banana_bunchy_top.jpg" alt="Banana Bunchy Top" /><p>🍌 Banana Bunchy Top Virus</p></div>
+    <div class="disease-card hidden"><img src="apple_scab.jpg" alt="Apple Scab" /><p>🍎 Apple Scab</p></div>
+    <div class="disease-card hidden"><img src="powdery_mildew_grapes.jpg" alt="Powdery Mildew Grapes" /><p>🍇 Powdery Mildew (Grapes)</p></div>
+    <div class="disease-card hidden"><img src="citrus_canker.jpg" alt="Citrus Canker" /><p>🍊 Citrus Canker</p></div>
+    <div class="disease-card hidden"><img src="yellow_mosaic_pulses.jpg" alt="Yellow Mosaic" /><p>🌱 Yellow Mosaic Virus (Pulses)</p></div>
+    <div class="disease-card hidden"><img src="ascochyta_blight.jpg" alt="Ascochyta Blight" /><p>💧 Ascochyta Blight (Chickpea)</p></div>
+    <div class="disease-card hidden"><img src="coffee_leaf_rust.jpg" alt="Coffee Leaf Rust" /><p>🌱 Coffee Leaf Rust</p></div>
+    <div class="disease-card hidden"><img src="tea_blight.jpg" alt="Tea Blight" /><p>🫖 Tea Blight (Exobasidium)</p></div>
+    <div class="disease-card hidden"><img src="powdery_mildew_sugarcane.jpg" alt="Powdery Mildew Sugarcane" /><p>🌾 Powdery Mildew (Sugarcane)</p></div>
   </div>
+
+  <button id="showMoreBtn" class="show-more-btn">Show More</button>
 </div>
 
+<style>
+  .disease-gallery {
+    padding: 40px;
+    text-align: center;
+  }
+  .disease-gallery h4 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .disease-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  .disease-card:hover {
+    transform: translateY(-5px);
+  }
+  .disease-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+  .disease-card.hidden {
+    display: none;
+  }
+  .show-more-btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 16px;
+    background: rgb(52, 157, 99);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+</style>
 
+<script>
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  const hiddenCards = document.querySelectorAll('.disease-card.hidden');
+  let expanded = false;
 
-
-
-
-
-
-
-
+  showMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    hiddenCards.forEach(card => {
+      card.style.display = expanded ? 'block' : 'none';
+    });
+    showMoreBtn.textContent = expanded ? 'Show Less' : 'Show More';
+  });
+</script>
 
 
 
 
 
 </section>
+
+
+
+
+
   <script src="script.js"></script>
+
+
+
+  <!-- ✅ Toggle Navbar JS -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menuLinks = document.getElementById('menuLinks');
+
+    hamburger.addEventListener('click', () => {
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
+
+
+
+
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </body>
 </html>

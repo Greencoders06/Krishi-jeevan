@@ -1,6 +1,6 @@
 
 function login() {
-  const loginBtn = document.getElementById("loginBtn");
+  const loginBtn = document.getElementById("login-btn");
   const welcomeText = document.getElementById("welcomeText");
 
   if (loginBtn && welcomeText) {
@@ -9,6 +9,10 @@ function login() {
     setTimeout(() => welcomeText.classList.add("show"), 50);
   }
 }
+
+
+
+
 
 window.addEventListener("load", () => {
   const nav = document.querySelector(".menu");
@@ -217,112 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 800); // wait 800ms after typing stops
   });
 });
-
-
-
-
-
-// Weather code mapping
-
-
-
-
-
-// Crops with categories
-
-/*
-
-const warmCrops = {
-  "Cereals / Grains": ["Rice (Paddy)", "Maize (Corn)", "Millets", "Wheat"],
-  "Pulses / Legumes": ["Moong (Green Gram)", "Urad (Black Gram)", "Chickpea (Gram / Chana)", "Lentils (Masoor)"],
-  "Vegetables": ["Tomato", "Brinjal / Eggplant", "Cucumber", "Pumpkin & Squash", "Okra (Ladyfinger)", "Chili / Capsicum", "Cauliflower & Cabbage", "Spinach", "Fenugreek (Methi)"],
-  "Fruits": ["Mango", "Banana", "Papaya", "Guava"],
-  "Spices & Herbs": ["Ginger", "Turmeric", "Coriander", "Basil"]
-};
-
-// Function to populate crop list
-function populateCropList() {
-  recommendedCrops.innerHTML = ""; 
-  for (const category in warmCrops) {
-    const catLi = document.createElement("li");
-    catLi.textContent = category;
-    catLi.style.fontWeight = "bold";
-    recommendedCrops.appendChild(catLi);
-
-    warmCrops[category].forEach(crop => {
-      const li = document.createElement("li");
-      li.textContent = "  " + crop;
-      recommendedCrops.appendChild(li);
-    });
-  }
-}
-
-// Show crops based on temperature
-function showCrops(temp) {
-  if (temp > 20) {
-    cropSuggestion.style.display = "block";
-    cropSuggestion.style.height = "50px"; 
-    cropToggle.textContent = "🌱 Recommended Crops for this weather type ⬇";
-  } else {
-    cropSuggestion.style.display = "none";
-  }
-}
-
-// Crop toggle click
-cropToggle.addEventListener("click", () => {
-  const city = document.getElementById("cityInput").value.trim();
-  
-  if (!city) {
-    recommendedCrops.innerHTML = "";
-    const warningLi = document.createElement("li");
-    warningLi.textContent = "⚠️ Please enter a city in the box above.";
-    warningLi.style.color = "red";
-    recommendedCrops.appendChild(warningLi);
-    cropSuggestion.style.height = "70px"; 
-    cropToggle.textContent = "🌱 Recommended Crops for this weather type ⬇";
-    return;
-  }
-
-  if (cropSuggestion.style.height === "50px" || cropSuggestion.style.height === "") {
-    cropSuggestion.style.height = "50px"; 
-    cropToggle.textContent = "🌱 Loading...";
-
-    recommendedCrops.innerHTML = "";
-    const loadingLi = document.createElement("li");
-    loadingLi.textContent = "Loading crops...";
-    recommendedCrops.appendChild(loadingLi);
-
-    setTimeout(() => {
-      populateCropList();
-      cropSuggestion.style.height = cropSuggestion.scrollHeight + "px";
-      cropToggle.textContent = "🌱 Recommended Crops ⬆";
-    }, 2000); 
-  } else {
-    cropSuggestion.style.height = "50px"; 
-    cropToggle.textContent = "🌱 Recommended Crops for this weather type ⬇";
-  }
-});
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -850,13 +748,16 @@ document.getElementById("findCropsBtn").addEventListener("click", () => {
 
 
 
-// get started button
 
-const getStartedBtn = document.getElementById('getStartedBtn');
-
-getStartedBtn.addEventListener('click', () => {
-  // Replace 'app.html' with the page you want to open
-  window.location.href = 'app.html';
-});
+function toggleMenu() {
+      document.querySelector('.menu-links').classList.toggle('active');
+    }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,ta,te,bho',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
 
 
